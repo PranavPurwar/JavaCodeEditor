@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center_vertical"
+	android:orientation="horizontal"
+	android:paddingTop="3dp"
+	android:paddingBottom="3dp">
+
+	<ImageView
+		android:id="@+id/result_item_image"
+		android:layout_width="23dp"
+		android:layout_height="23dp"
+		android:layout_marginStart="3dp"
+		android:layout_marginEnd="3dp"
+		android:background="@drawable/circle_drawable" />
+
+	<TextView
+		android:id="@+id/result_item_label"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="4dp"
+		android:singleLine="true"
+		android:text="THIS IS A REALLY LONG TEXT THAT SHOUTS"
+		android:textColor="#FFFEFEFE"
+		android:textSize="13sp" />
+
+	<TextView
+		android:id="@+id/result_item_desc"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginEnd="8dp"
+		android:layout_marginStart="4dp"
+		android:singleLine="true"
+		android:ellipsize="end"
+		android:text="Small Text"
+		android:textColor="#808080"
+		android:textSize="11sp" />
+
+</LinearLayout>
