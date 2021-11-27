@@ -20,6 +20,9 @@ public class Item {
 		if (label.contains(" throws")) {
 			label = StringUtils.substringBefore(label, " throws");
 		}
+		if (label.contains(" [")) {
+			label = StringUtils.substringBefore(label, " [");
+		}
 		final String returnType = m.getReturnType().toString();
 		this.desc = returnType.startsWith("java.lang.") ? StringUtils.substringAfter(returnType, "java.lang.") : returnType;
 		this.desc = desc.replace(" ", "");
