@@ -14,11 +14,15 @@ import org.apache.bcel.classfile.Method;
 import org.apache.bcel.classfile.Field;
 import org.apache.commons.lang3.StringUtils;
 
-public class test {
+public class CompletionProvider {
 
 public static String path;
 
-    public static void set(String s) {path = s;}
+    public static void setClassPath(String str) {
+		path = str;
+	}
+
+
 	public static Object[] getClasses() {
 		try {
 			JavaClass clazz = new ClassParser(path).parse();

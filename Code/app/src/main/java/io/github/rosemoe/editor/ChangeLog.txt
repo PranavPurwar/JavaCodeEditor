@@ -11,8 +11,11 @@
   * Add method to apply custom number of tabs to editor
   *
   * Add kotlin language support
+  *
   * Make completion items look better
+  *
   * Made completion items highlight, what's being written
+  *
   * Fixed crash on fast typing
   *
   * // TODO: auto commit first completion item on enter click

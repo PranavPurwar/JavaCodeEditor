@@ -38,6 +38,7 @@ import io.github.rosemoe.editor.util.Objects;
 public class EditorColorScheme {
     //-----------------Highlight colors-----------
 
+    public static final int ATTRIBUTE_VALUE = 29;
     public static final int ANNOTATION = 28;
     public static final int FUNCTION_NAME = 27;
     public static final int IDENTIFIER_NAME = 26;

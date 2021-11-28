@@ -38,6 +38,8 @@ import java.lang.reflect.*;
 import io.github.rosemoe.editor.widget.CodeEditor;
 import io.github.rosemoe.editor.langs.java.*;
 import io.github.rosemoe.editor.langs.kotlin.*;
+import io.github.rosemoe.editor.langs.python.*;
+import io.github.rosemoe.editor.langs.css3.*;
 import io.github.rosemoe.editor.widget.schemes.*;
 import io.github.rosemoe.editor.util.PackageImporter;
 import org.apache.commons.lang3.StringUtils;
@@ -76,7 +78,7 @@ public class MainActivity extends Activity {
 		
 		mEditor.setOverScrollEnabled(false);
 		
-		mEditor.setEditorLanguage(new JavaLanguage());
+		mEditor.setEditorLanguage(new PythonLanguage());
 		
 		mEditor.setTextSize(12);
 		DialogProperties pickp = new DialogProperties();
@@ -92,7 +94,7 @@ public class MainActivity extends Activity {
 		pick.setPositiveBtnName("Select");
 		pick.setDialogSelectionListener(new DialogSelectionListener() {
 			@Override public void onSelectedFilePaths(String[] files) {
-				test.set(Arrays.asList(files).get((int) 0).toString());
+				CompletionProvider.setClassPath(Arrays.asList(files).get((int) 0).toString());
 			} 
 		});
 		pick.show();

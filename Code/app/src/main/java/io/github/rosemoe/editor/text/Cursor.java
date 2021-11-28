@@ -221,6 +221,7 @@ public final class Cursor {
         if (isSelected()) {
             mContent.replace(getLeftLine(), getLeftColumn(), getRightLine(), getRightColumn(), text);
         } else {
+			if (text.toString().endsWith("{")) text = text + "}";
 		    char first = text.charAt(0);
             if (mAutoIndentEnabled && text.length() != 0) {
                 first = text.charAt(0);
@@ -255,6 +256,9 @@ public final class Cursor {
                 }
             }
             mContent.insert(getLeftLine(), getLeftColumn(), text);
+			if (text.toString().endsWith("{}")) {
+				set(getLeftLine(), getLeftColumn() - 1);
+			}
         }
     }
 

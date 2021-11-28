@@ -3588,7 +3588,8 @@ public class CodeEditor extends View implements ContentListener, TextAnalyzer.Ca
                         }
                     } else if (!event.isCtrlPressed() && !event.isAltPressed()) {
                         if (event.isPrintingKey()) {
-                            getCursor().onCommitText(new String(Character.toChars(event.getUnicodeChar(event.getMetaState()))));
+							String commit = new String(Character.toChars(event.getUnicodeChar(event.getMetaState())));
+                            getCursor().onCommitText(commit);
                             cursorChangeExternal();
                         } else {
                             return super.onKeyDown(keyCode, event);

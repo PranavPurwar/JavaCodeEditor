@@ -1,3 +1,26 @@
+/*
+ *    sora-editor - the awesome code editor for Android
+ *    https://github.com/Rosemoe/CodeEditor
+ *    Copyright (C) 2020-2021  Rosemoe
+ *
+ *     This library is free software; you can redistribute it and/or
+ *     modify it under the terms of the GNU Lesser General Public
+ *     License as published by the Free Software Foundation; either
+ *     version 2.1 of the License, or (at your option) any later version.
+ *
+ *     This library is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ *     Lesser General Public License for more details.
+ *
+ *     You should have received a copy of the GNU Lesser General Public
+ *     License along with this library; if not, write to the Free Software
+ *     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301
+ *     USA
+ *
+ *     Please contact Rosemoe by email 2073412493@qq.com if you need
+ *     additional information or have any questions
+ */
 package io.github.rosemoe.editor.langs.java;
 
 import io.github.rosemoe.editor.langs.internal.MyCharacter;
@@ -457,7 +480,7 @@ public class JavaTextTokenizer {
                 "goto", "continue", "break", "transient", "void", "try", "catch",
                 "finally", "while", "case", "default", "const", "enum", "extends",
                 "implements", "import", "instanceof", "interface", "native",
-                "this", "throw", "throws", "true", "false", "null", "String"
+                "this", "throw", "throws", "true", "false", "null"
         };
         Tokens[] sTokens = new Tokens[]{
                 Tokens.ABSTRACT, Tokens.ASSERT, Tokens.BOOLEAN, Tokens.BYTE, Tokens.CHAR, Tokens.CLASS, Tokens.DO,
@@ -467,7 +490,7 @@ public class JavaTextTokenizer {
                 Tokens.GOTO, Tokens.CONTINUE, Tokens.BREAK, Tokens.TRANSIENT, Tokens.VOID, Tokens.TRY, Tokens.CATCH,
                 Tokens.FINALLY, Tokens.WHILE, Tokens.CASE, Tokens.DEFAULT, Tokens.CONST, Tokens.ENUM, Tokens.EXTENDS,
                 Tokens.IMPLEMENTS, Tokens.IMPORT, Tokens.INSTANCEOF, Tokens.INTERFACE, Tokens.NATIVE,
-                Tokens.THIS, Tokens.THROW, Tokens.THROWS, Tokens.TRUE, Tokens.FALSE, Tokens.NULL, Tokens.STRINGKEY
+                Tokens.THIS, Tokens.THROW, Tokens.THROWS, Tokens.TRUE, Tokens.FALSE, Tokens.NULL
         };
         keywords = new TrieTree<>();
         for (int i = 0; i < sKeywords.length; i++) {

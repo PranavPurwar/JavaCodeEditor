@@ -83,7 +83,7 @@ public class IdentifierAutoComplete implements AutoCompleteProvider {
 			keywords.addAll(words);
 		}
 		List<ResultItem> methods = new ArrayList<>();
-		final Object[] methodArr = io.github.rosemoe.editor.test.getMethods();
+		final Object[] methodArr = io.github.rosemoe.editor.CompletionProvider.getMethods();
 		if (methodArr != null) {
 			for (Object obj : methodArr) {
 				Item method = (Item) obj;
@@ -95,7 +95,7 @@ public class IdentifierAutoComplete implements AutoCompleteProvider {
 			keywords.addAll(methods);
 		}
 		List<ResultItem> fields = new ArrayList();
-		final Object[] fieldArr = io.github.rosemoe.editor.test.getFields();
+		final Object[] fieldArr = io.github.rosemoe.editor.CompletionProvider.getFields();
 		if (fieldArr != null) {
 			for (Object obj : fieldArr) {
 				Item field = (Item) obj;
@@ -107,7 +107,7 @@ public class IdentifierAutoComplete implements AutoCompleteProvider {
 			keywords.addAll(fields);
 		}
 		List<ResultItem> classes = new ArrayList();
-		final Object[] classArr = io.github.rosemoe.editor.test.getClasses();
+		final Object[] classArr = io.github.rosemoe.editor.CompletionProvider.getClasses();
 		if (classArr != null) {
 			for (Object obj : classArr) {
 				Item clazz = (Item) obj;

@@ -13,6 +13,34 @@ import io.github.rosemoe.editor.widget.EditorColorScheme;
  */
 public class Span {
 
+    /**
+     * Flag for {@link Span#problemFlags}.
+     *
+     * Indicates this span is in ERROR region
+     */
+    public static final int FLAG_ERROR = 1 << 3;
+    /**
+     * Flag for {@link Span#problemFlags}.
+     *
+     * Indicates this span is in WARNING region
+     */
+    public static final int FLAG_WARNING = 1 << 2;
+    /**
+     * Flag for {@link Span#problemFlags}.
+     *
+     * Indicates this span is in TYPO region
+     */
+    public static final int FLAG_TYPO = 1 << 1;
+    /**
+     * Flag for {@link Span#problemFlags}.
+     *
+     * Indicates this span is in DEPRECATED region
+     */
+    public static final int FLAG_DEPRECATED = 1;
+
+    public static final int STYLE_BOLD = 1;
+    public static final int STYLE_ITALICS = 1 << 1;
+
     public int column;
 
     public int colorId;

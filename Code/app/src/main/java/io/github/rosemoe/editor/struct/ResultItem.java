@@ -21,9 +21,9 @@ public class ResultItem {
 
     public static final int TYPE_KEYWORD = 0;
     public static final int TYPE_LOCAL_METHOD = 1;
-    public static final int TYPE_METHOD = 2;
-    public static final int TYPE_FIELD = 3;
-	public static final int TYPE_CLASS = 4;
+	public static final int TYPE_CLASS = 2;
+	public static final int TYPE_FIELD = 3;
+    public static final int TYPE_METHOD = 4;
 
     public int type;
 

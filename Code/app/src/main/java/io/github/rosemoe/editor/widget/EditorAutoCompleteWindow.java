@@ -169,10 +169,12 @@ public class EditorAutoCompleteWindow extends EditorBasePopupWindow {
 					cursor.onCommitText(item.commit);
 					if (item.desc.equals("void")) {
 						cursor.onCommitText(";");
-						mEditor.getCursor().set(mEditor.getCursor().getLeftLine(), mEditor.getCursor().getLeftLine() - 2);
+						if (!item.label.endsWith("()")) {
+						mEditor.getCursor().set(mEditor.getCursor().getLeftLine(), mEditor.getCursor().getLeftColumn() - 2);
+						}
 						
 					} else if (!item.label.endsWith("()")) {
-						mEditor.getCursor().set(mEditor.getCursor().getLeftLine(), mEditor.getCursor().getLeftLine() - 1);
+						mEditor.getCursor().set(mEditor.getCursor().getLeftLine(), mEditor.getCursor().getLeftColumn() - 1);
 					}
 				} else if (item.type == ResultItem.TYPE_FIELD) {
 					cursor.onCommitText(item.commit);
