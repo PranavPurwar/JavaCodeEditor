@@ -15,5 +15,5 @@ dependencyResolutionManagement {
         maven{url "https://jitpack.io"}
     }
 }
-rootProject.name = "Html Editor"
+rootProject.name = "Code"
 include ':app'
