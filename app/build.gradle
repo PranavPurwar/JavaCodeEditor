@@ -31,4 +31,10 @@ android {
 
 dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	implementation 'org.apache.commons:commons-lang3:3.12.0'
+	implementation 'com.github.angads25:filepicker:1.1.1'
+	implementation 'org.antlr:antlr4:4.10.1'
+	//implementation 'io.github.Rosemoe.sora-editor:language-css3:0.8.4'
+
+
 }
