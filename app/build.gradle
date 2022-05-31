@@ -3,24 +3,38 @@ plugins {
 }
 
 android {
-	compileSdkVersion 28
-	
-	defaultConfig {
-		applicationId "io.github.rosemoe.editor"
-		minSdkVersion 21
-		targetSdkVersion 28
-		versionCode 1
-		versionName "1.0"
-	}
-	
-	buildTypes {
-		release {
-			minifyEnabled false
-			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-		}
-	}
+    compileSdk 32
+    buildToolsVersion '32.0.0'
+
+    lint {
+        checkReleaseBuilds false
+    }
+    defaultConfig {
+        applicationId "io.github.rosemoe.editor"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	implementation 'org.apache.commons:commons-lang3:3.12.0'
+	implementation 'com.github.angads25:filepicker:1.1.1'
+	implementation 'org.antlr:antlr4:4.10.1'
+	//implementation 'io.github.Rosemoe.sora-editor:language-css3:0.8.4'
+
+
 }
